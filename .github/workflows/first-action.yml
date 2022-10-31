@@ -1,0 +1,13 @@
+name: First Workflow  # This is the name of the WF
+on: workflow_dispatch  # When the WF will run. This one makes sure that we can manually trigger this WF.
+# Define what will have to be done
+jobs:
+  first-job:
+    runs-on: ubuntu-latest # Define the environment where this will run. https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    steps:  # Define the steps this job has to follow. Each step has a name and a run tag. 
+      - name: Print greeting
+        run: echo "Hello World!"  # What to do
+      - name: Print goodbye
+        run: echo "Done - bye!"
+  
+  
